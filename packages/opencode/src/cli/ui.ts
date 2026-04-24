@@ -6,9 +6,9 @@ import { logo as glyphs } from "./logo"
 export namespace UI {
   const wordmark = [
     `⠀                                ▄     `,
-    `█▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█`,
-    `█  █ █  █ █▀▀▀ █  █ █    █  █ █  █ █▀▀▀`,
-    `▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀  ▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀`,
+    `█▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █ █ █▀▀█ █▀▀▓`,
+    `█  █ █  █ █▀▀▀ █  █ █    █  █ █ █ █__█ █ █ █`,
+    `▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀  ▀ ▀▀▀▀ ▀▀▀▀ ▀ ▀ ▀▀▀▀ ▀▀▀▀`,
   ]
 
   export const CancelledError = NamedError.create("UICancelledError", z.void())
@@ -66,9 +66,9 @@ export namespace UI {
       bg: "\x1b[48;5;235m",
     }
     const right = {
-      fg: reset,
-      shadow: "\x1b[38;5;238m",
-      bg: "\x1b[48;5;238m",
+      fg: "\x1b[91m",
+      shadow: "\x1b[38;5;52m",
+      bg: "\x1b[48;5;16m",
     }
     const gap = " "
     const draw = (line: string, fg: string, shadow: string, bg: string) => {

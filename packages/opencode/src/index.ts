@@ -62,7 +62,7 @@ function show(out: string) {
 
 const cli = yargs(args)
   .parserConfiguration({ "populate--": true })
-  .scriptName("opencode")
+  .scriptName("opencode-v2")
   .wrap(100)
   .help("help", "show help")
   .alias("help", "h")
@@ -83,7 +83,7 @@ const cli = yargs(args)
   })
   .middleware(async (opts) => {
     if (opts.pure) {
-      process.env.OPENCODE_PURE = "1"
+      process.env.OPENCODV2_PURE = "1"
     }
 
     await Log.init({
